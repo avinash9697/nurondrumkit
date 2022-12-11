@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Drum Kit</title>
+</head>
+<body>
+    <div class="main-div">
+        <h1 class="heading">Drum 🥁 Kit</h1>
+        <div class="buttons-div">
+            <button class="button btn-w" onclick="crash.play()">w</button>
+            <button class="button btn-a" onclick="kickbass.play()">a</button>
+            <button class="button btn-s" onclick="snare.play()">s</button>
+            <button class="button btn-d" onclick="tom1.play()">d</button>
+            <button class="button btn-j" onclick="tom2.play()">j</button>
+            <button class="button btn-k" onclick="tom3.play()">k</button>
+            <button class="button btn-l" onclick="tom4.play()">l</button>
+        </div>
+        <p class="para">NURON</p>
+    </div>
+    <script>
+        //onclick events
+        const crash=new Audio();
+        crash.src= "./crash.mp3";
+        const kickbass =  new Audio();
+        kickbass.src="./kick-bass.mp3";
+        const snare =  new Audio();
+        snare.src="./snare.mp3";
+        const tom1 =  new Audio();
+        tom1.src="./tom-1.mp3";
+        const tom2 =  new Audio();
+        tom2.src="./tom-2.mp3";
+        const tom3 =  new Audio();
+        tom3.src="./tom-3.mp3";
+        const tom4 =  new Audio();
+        tom4.src="./tom-4.mp3";
+
+        //keyboard events
+        document.addEventListener("keydown",function(event){
+            if (event.key=== "w" || event.key==="W"){
+                const crash=new Audio();
+                crash.src= "./crash.mp3";
+                crash.play();
+            } 
+            else if (event.key === "a" || event.key ==="A"){
+                const kickbass =  new Audio();
+                kickbass.src="./kick-bass.mp3";
+                kickbass.play();
+            }
+            else if (event.key === "s" || event.key ==="S"){
+                const snare =  new Audio();
+                snare.src="./snare.mp3";
+                snare.play();
+            }
+            else if (event.key === "d" || event.key ==="F"){
+                const tom1 =  new Audio();
+                tom1.src="./tom-1.mp3";
+                tom1.play();
+            }
+            else if (event.key === "j" || event.key ==="J"){
+                const tom2 =  new Audio();
+                tom2.src="./tom-2.mp3";
+                tom2.play();
+            }
+            else if (event.key === "k" || event.key ==="K"){
+                const tom3 =  new Audio();
+                tom3.src="./tom-3.mp3";
+                tom3.play();
+            }
+            else if (event.key === "l" || event.key ==="L"){
+                const tom4 =  new Audio();
+                tom4.src="./tom-4.mp3";
+                tom4.play();
+            } 
+        })
+    </script>
+</body>
+</html>
